@@ -202,7 +202,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 60,
                     ),
                     Container(
                       height: 50,
