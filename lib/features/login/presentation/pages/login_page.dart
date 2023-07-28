@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
           children: [
             TextFormField(
               controller: _emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Email",
               ),
             ),
@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
             TextFormField(
               controller: _passwordController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Password",
               ),
             ),
