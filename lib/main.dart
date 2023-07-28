@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:handyman_mobile/features/register/presentation/pages/register_page.dart';
 import 'package:handyman_mobile/theme/colors.dart';
 
 import 'features/login/presentation/bloc/login_bloc.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => LoginBloc(),
         )
-      ], child: LoginPage()),
+      ], child: RegisterPage()),
     );
   }
 }

@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 60,
+                    height: 40,
                   ),
                   const Text(
                     "Login to your\naccount",
@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
-                    height: 60,
+                    height: 40,
                   ),
                   TextFormField(
                     controller: _emailController,
