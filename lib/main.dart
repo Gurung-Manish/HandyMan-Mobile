@@ -7,7 +7,6 @@ import 'package:handyman_mobile/router/routes.dart';
 import 'package:handyman_mobile/theme/colors.dart';
 
 import 'features/login/presentation/bloc/login_bloc.dart';
-import 'features/login/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
