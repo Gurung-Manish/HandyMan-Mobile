@@ -44,23 +44,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SizedBox(
-          height: double.infinity,
-          child: PageView(
-            scrollDirection: Axis.horizontal,
-            controller: _pageController,
-            onPageChanged: (index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            children: [
-              const HomeScreen(),
-              Container(color: Colors.blue),
-              Container(color: Colors.green),
-              Container(color: Colors.black),
-            ],
-          ),
+        child: PageView(
+          scrollDirection: Axis.horizontal,
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          children: [
+            const HomeScreen(),
+            Container(color: Colors.blue),
+            Container(color: Colors.green),
+            Container(color: Colors.black),
+          ],
         ),
       ),
       bottomNavigationBar: Padding(
