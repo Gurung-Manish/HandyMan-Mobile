@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:handyman_mobile/features/home/presentation/widgets/main_home_screen.dart';
 import 'package:handyman_mobile/theme/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
             children: [
-              Container(color: Colors.red),
+              const HomeScreen(),
               Container(color: Colors.blue),
               Container(color: Colors.green),
               Container(color: Colors.black),
