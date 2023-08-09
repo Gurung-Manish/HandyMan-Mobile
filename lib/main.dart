@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:handyman_mobile/features/home/presentation/pages/home_page.dart';
+import 'package:handyman_mobile/features/register/presentation/bloc/register_bloc.dart';
 import 'package:handyman_mobile/features/register/presentation/pages/register_page.dart';
+import 'package:handyman_mobile/router/routes.dart';
 import 'package:handyman_mobile/theme/colors.dart';
 
 import 'features/login/presentation/bloc/login_bloc.dart';
@@ -15,15 +18,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.from(colorScheme: lightThemeColors(context)),
-      darkTheme: ThemeData.from(colorScheme: darkThemeColors(context)),
-      home: MultiBlocProvider(providers: [
+    return MultiBlocProvider(
+      providers: [
         BlocProvider(
           create: (context) => LoginBloc(),
+        ),
+        BlocProvider(
+          create: (context) => RegisterBloc(),
         )
-      ], child: RegisterPage()),
+      ],
+      child: MaterialApp.router(
+        routerConfig: router,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.from(colorScheme: lightThemeColors(context)),
+        darkTheme: ThemeData.from(colorScheme: darkThemeColors(context)),
+        // home: MultiBlocProvider(providers: [
+        //   BlocProvider(
+        //     create: (context) => LoginBloc(),
+        //   )
+        // ], child: HomePage()),
+      ),
     );
   }
 }
